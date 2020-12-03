@@ -1,9 +1,13 @@
 # arch-linux-installation
 Automating the [Arch Linux install process](https://wiki.archlinux.org/index.php/installation_guide)  
 
-## Limitations
+## Limitations / Notes
 This script tries not to go beyond the Arch Linux installation guide and will leave you with a quite minimal bootable system (no GUI included). For further configuration automation, take a look at [my configuration repo](https://github.com/Simon-A-P/dotfiles).  
 Currently this script is only set up for non-encrypted systems with 3 partitions (EFI, swap, root).  
+GRUB will be installed as the bootloader.  
+NetworkManager will be installed to be able to connect to the internet after the reboot (```nmtui``` in the terminal for a graphical wifi tool).  
+Sudoers ```Defaults targetpw``` and ```ALL ALL=(ALL) ALL``` will be set.  
+The mirrorlist will be overwritten with the 50 most recently synchronized HTTPS mirrors, sorted by download rate.
 
 ## How do I use this?
 1. Set up an installation medium:  
@@ -24,6 +28,17 @@ Currently this script is only set up for non-encrypted systems with 3 partitions
 7. Clone this repository in its own directory in the root directory:
 ```
 cd /  
-git clone https://Simon-A-P  
+git clone https://Simon-A-P/arch-linux-installation.git 
 ```
 8. Execute the install script contained in the repository: ```./arch-linux-installation/install.sh```
+
+## Installed packages
+```
+base
+base-devel
+linux
+linux-firmware
+grub
+efibootmgr
+networkmanager
+```
