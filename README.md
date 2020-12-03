@@ -29,10 +29,8 @@ Automating the [Arch Linux install process](https://wiki.archlinux.org/index.php
 
 6. Install git: ```pacman -S git```  
 
-7. Clone this repository in its own directory in the root directory:
-```
-git clone https://github.com/Simon-A-P/arch-install.git 
-```
+7. Clone this repository into its own directory: ```git clone https://github.com/Simon-A-P/arch-install.git```
+
 8. Execute the install script contained in the repository: ```./arch-install/install.sh```
 
 ## Installed packages
