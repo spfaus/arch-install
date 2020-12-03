@@ -1,4 +1,4 @@
-# arch-linux-installation
+# arch-install
 Automating the [Arch Linux install process](https://wiki.archlinux.org/index.php/installation_guide)  
 
 ## Limitations / Notes
@@ -7,11 +7,11 @@ Currently this script is only set up for non-encrypted systems with 3 partitions
 GRUB will be installed as the bootloader.  
 NetworkManager will be installed and enabled to be able to connect to the internet after a reboot (```nmtui``` in the terminal for a graphical wifi tool).  
 Sudoers ```Defaults targetpw``` and ```ALL ALL=(ALL) ALL``` will be set.  
-The mirrorlist will be overwritten with the 50 most recently synchronized HTTPS mirrors, sorted by download rate.
-Neovim will be installed as text editor.
-The [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/) group and git will be installed.
-The finished installation will be in English.
-A user will be created.
+The mirrorlist will be overwritten with the 50 most recently synchronized HTTPS mirrors, sorted by download rate.  
+Neovim will be installed as text editor.  
+The [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/) group and git will be installed.  
+The finished installation will be in English.  
+A user will be created.  
 
 ## How do I use this?
 1. Set up an installation medium:  
@@ -31,10 +31,9 @@ A user will be created.
 
 7. Clone this repository in its own directory in the root directory:
 ```
-cd /  
-git clone https://Simon-A-P/arch-linux-installation.git 
+git clone https://github.com/Simon-A-P/arch-install.git 
 ```
-8. Execute the install script contained in the repository: ```./arch-linux-installation/install.sh```
+8. Execute the install script contained in the repository: ```./arch-install/install.sh```
 
 ## Installed packages
 ```

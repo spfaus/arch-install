@@ -14,9 +14,9 @@ sleep 5
 lsblk
 read -p "Enter EFI, swap, and root partition-suffix in order seperated by spaces (eg. p1 p2 p3): " EFI_PARTITION_SUFFIX SWAP_PARTITION_SUFFIX ROOT_PARTITION_SUFFIX 
 
-$EFI_PARTITION=$INSTALL_DRIVE$EFI_PARTITION_SUFFIX
-$SWAP_PARTITION=$INSTALL_DRIVE$SWAP_PARTITION_SUFFIX
-$ROOT_PARTITION=$INSTALL_DRIVE$ROOT_PARTITION_SUFFIX
+EFI_PARTITION=$INSTALL_DRIVE$EFI_PARTITION_SUFFIX
+SWAP_PARTITION=$INSTALL_DRIVE$SWAP_PARTITION_SUFFIX
+ROOT_PARTITION=$INSTALL_DRIVE$ROOT_PARTITION_SUFFIX
 
 mkfs.ext4 /dev/$ROOT_PARTITION
 mkfs.vfat /dev/$EFI_PARTITION
@@ -33,7 +33,7 @@ pacstrap /mnt base base-devel linux linux-firmware man-db man-pages texinfo grub
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-cp /arch-linux-installation/chroot.sh /mnt
+cp ./arch-install/chroot.sh /mnt
 arch-chroot /mnt ./chroot.sh
 rm -f /mnt/chroot.sh
 
