@@ -1,8 +1,6 @@
 #!/bin/bash
 set -ex
 
-cd /
-
 timedatectl set-ntp true
 
 lsblk
