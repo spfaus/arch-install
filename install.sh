@@ -27,7 +27,7 @@ swapon /dev/$SWAP_PARTITION
 
 reflector --latest 50 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-pacstrap /mnt base base-devel linux linux-firmware man-db man-pages texinfo grub efibootmgr networkmanager neovim git
+pacstrap /mnt base base-devel linux linux-firmware man-db man-pages texinfo grub efibootmgr networkmanager git
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
