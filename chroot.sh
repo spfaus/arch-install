@@ -1,13 +1,13 @@
 #!/bin/bash
-set -ex
+set -e
 
-ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+ln -sf /usr/share/zoneinfo/America/Toronto /etc/localtime
 hwclock --systohc
 
-sed -i -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
+sed -i -e 's/#en_CA.UTF-8 UTF-8/en_CA.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
 
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "LANG=en_CA.UTF-8" > /etc/locale.conf
 
 read -p "Enter your hostname: " MY_HOSTNAME
 echo $MY_HOSTNAME > /etc/hostname

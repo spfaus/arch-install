@@ -9,7 +9,7 @@ Automating the [Arch Linux install process](https://wiki.archlinux.org/index.php
 - Sudoers ```Defaults targetpw``` and ```ALL ALL=(ALL) ALL``` will be set.  
 - The mirrorlist will be overwritten with the 50 most recently synchronized HTTPS mirrors, sorted by download rate.  
 - The [base-devel](https://www.archlinux.org/groups/x86_64/base-devel/) group and git will be installed.  
-- The finished installation will be in English.  
+- The finished installation will be in English (Canada).  
 - A user will be created.  
 
 ## How do I use this?
