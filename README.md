@@ -2,7 +2,7 @@
 Automating the [Arch Linux install process](https://wiki.archlinux.org/index.php/installation_guide)  
 
 ## Limitations / Notes
-- This script tries not to go much beyond the Arch Linux installation guide and will leave you with a quite minimal bootable system (no GUI included). For further configuration automation, take a look at [my configuration repo](https://github.com/Simon-A-P/dotfiles).  
+- This script tries not to go much beyond the Arch Linux installation guide and will leave you with a quite minimal bootable system (no GUI included). For further configuration automation, take a look at [my configuration repo](https://github.com/spfaus/dotfiles).  
 - Currently this script is only set up for non-encrypted systems with 3 partitions (EFI, swap, root).  
 - GRUB will be installed as the bootloader.  
 - NetworkManager will be installed and enabled to be able to connect to the internet after a reboot (```nmtui``` in the terminal for a graphical wifi tool).  
@@ -26,7 +26,7 @@ Automating the [Arch Linux install process](https://wiki.archlinux.org/index.php
 
 6. Install git: ```pacman -Sy git```  
 
-7. Clone this repository into its own directory: ```git clone https://github.com/Simon-A-P/arch-install.git```
+7. Clone this repository into its own directory: ```git clone https://github.com/spfaus/arch-install.git```
 
 8. Execute the install script contained in the repository: ```./arch-install/install.sh```
 
