@@ -24,6 +24,8 @@ Automating the [Arch Linux install process](https://wiki.archlinux.org/index.php
 
 4. [Connect to the internet](https://wiki.archlinux.org/index.php/installation_guide#Connect_to_the_internet)  
 
+5. Init pacman key: ```pacman-key --init```  
+
 6. Install git: ```pacman -Sy git```  
 
 7. Clone this repository into its own directory: ```git clone https://github.com/spfaus/arch-install.git```
